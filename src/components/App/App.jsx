@@ -22,6 +22,7 @@ const App = () => {
     dispatch(fetchTable());
     setData(table)
   }, [])
+
   useEffect(() => {
     if (value && column && condition) {
       filterData(condition, value, column)
@@ -37,8 +38,6 @@ const App = () => {
       setData(table)
     }
   }, [table])
-
-
 
   const filterData = (condition, value, column) => {
     const copyArray = [...data];
@@ -78,13 +77,13 @@ const App = () => {
   }
 
   return (
-    <div className="container m-auto">
+    <div className="container">
       {!isLoading ?
         <div>
           <Filters />
           {data.length ? <TableComponent data={currentItems} /> : "Ничего не найдено. Попробуйте изменить фильтры."}
           <Paginator paginate={paginate} currentPage={currentPage} itemsPerPage={itemsPerPage} totalItems={data.length} />
-        </div> : <Spinner className='preloader' animation="border" variant="info" size="lg" />}
+        </div> : <div className="preloader"><Spinner animation="border" variant="info" size="lg" /></div>}
     </div>
   );
 
