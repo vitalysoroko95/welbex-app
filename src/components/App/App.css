@@ -1,0 +1,79 @@
+body {
+  background-color: #3e4347;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+ul.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+
+.form-container {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-container .form-select {
+  max-width: 200px;
+}
+
+.filters-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  position: relative;
+  color: red;
+  text-align: center;
+}
+
+
+.page-item .page-link {
+  background: #1e9bb4;
+  border-color: #212529;
+  color: #212529;
+  transition: all 0.3s;
+}
+
+.page-item.active .page-link {
+  background: #1e9bb4 !important;
+  border-color: #212529;
+  color: #212529;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.page-item:hover .page-link {
+  background: #1e9bb4 !important;
+  border-color: #212529;
+  color: #212529;
+  transform: scale(1.2);
+}
+
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
